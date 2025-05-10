@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Translator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>🎤 Speech Translator</h1>
+
+        <div id="record-section" class="mic-area">
+            <span id="mic-icon">🎤 Start Recording</span>
+            <canvas id="waveform"></canvas>
+        </div>
+
+        <div class="lang-select">
+            <label for="source-lang">Source Language:</label>
+            <select id="source-lang">
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+            </select>
+
+            <label for="target-lang">Target Language:</label>
+            <select id="target-lang">
+                <option value="ar">Arabic</option>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>               
+            </select>
+        </div>
+
+        <div class="output">
+            <h2>Transcription:</h2>
+            <textarea id="transcription" readonly placeholder="Transcript will appear here..." title="Transcript will appear here"></textarea>
+            
+            <h2>Translation:</h2>
+            <textarea id="translation" readonly placeholder="Translation will appear here..." title="Translation will appear here"></textarea>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
